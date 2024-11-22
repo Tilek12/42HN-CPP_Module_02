@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:05:53 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/22 16:16:57 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/22 16:46:33 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ public:
 	int		toInt( void ) const;
 
 };
+
+std::ostream& operator<<( std::ostream& out, const Fixed& fixed );
 
 #endif
