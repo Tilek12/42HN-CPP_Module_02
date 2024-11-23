@@ -6,13 +6,13 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:20:43 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/22 16:47:16 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/23 18:40:06 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed( void ) : _value( 0 ) {
+Fixed::Fixed( void ) : _fixedPointValue( 0 ) {
 
 	std::cout << "Default constuctor called\n";
 
@@ -21,14 +21,32 @@ Fixed::Fixed( void ) : _value( 0 ) {
 Fixed::Fixed( int value ) {
 
 	std::cout << "Int constructor called\n";
-	_value = value << _bits;
+
+	if ( value > ( intMAX >> _fractionalBits ) ||
+		value < ( intMIN >> _fractionalBits ) ) {
+		std::cerr << "ERROR: Int value overflow detected!\n";
+		_fixedPointValue = 0;
+		std::exit( 1 );
+	} else {
+		_fixedPointValue = value << _fractionalBits;
+	}
 
 }
 
 Fixed::Fixed( float value ) {
 
+
 	std::cout << "Float constructor called\n";
-	_value = roundf( value * ( 1 << _bits ) );
+
+	float newValue = value * ( 1 << _fractionalBits );
+
+	if ( newValue > intMAX || newValue < intMIN ) {
+		std::cerr << "ERROR: Float value overflow detected!\n";
+		_fixedPointValue = 0;
+		std::exit( 1 );
+	} else {
+		_fixedPointValue = static_cast<int>( roundf( newValue ) );
+	}
 
 }
 
@@ -44,7 +62,7 @@ Fixed& Fixed::operator=( const Fixed& other ) {
 	std::cout << "Copy assignment operator called\n";
 
 	if ( this != &other ) {
-		_value = other._value;
+		_fixedPointValue = other._fixedPointValue;
 	}
 
 	return *this;
@@ -60,26 +78,26 @@ Fixed::~Fixed( void ) {
 int	Fixed::getRawBits( void ) const {
 
 	std::cout << "getRawBits member function called\n";
-	return _value;
+	return _fixedPointValue;
 
 }
 
-void	Fixed::setRawBits( int const rawBits ) {
+void	Fixed::setRawBits( int const raw ) {
 
 	std::cout << "setRawBits member function called\n";
-	_value = rawBits;
+	_fixedPointValue = raw;
 
 }
 
 float	Fixed::toFloat( void ) const {
 
-	return static_cast<float>( _value ) / ( 1 << _bits );
+	return static_cast<float>( _fixedPointValue ) / ( 1 << _fractionalBits );
 
 }
 
 int	Fixed::toInt( void ) const {
 
-	return _value >> _bits;
+	return _fixedPointValue >> _fractionalBits;
 
 }
 

@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:48:43 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/22 16:49:49 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/23 19:25:47 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	main( void ) {
 
-	Fixed	a;
-	Fixed	const b( 10 );
-	Fixed	const c( 42.42f );
-	Fixed	const d( b );
+	Fixed		a;
+	Fixed const	b( 10 );
+	Fixed const	c( 42.42f );
+	Fixed const	d( b );
 
 	a = Fixed( 1234.4321f );
 

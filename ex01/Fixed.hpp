@@ -6,22 +6,25 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:05:53 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/22 16:46:33 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/23 18:31:48 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
-#define FIXED_HPP
+# define FIXED_HPP
 
-#include <iostream>
-#include <cmath>
+# include <iostream>
+# include <cmath>
+
+# define intMAX 2147483647
+# define intMIN -2147483648
 
 class	Fixed {
 
 private:
 
-	int					_value;
-	static const int	_bits = 8;
+	int					_fixedPointValue;
+	static const int	_fractionalBits = 8;
 
 public:
 
