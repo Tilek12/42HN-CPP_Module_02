@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:29:48 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/24 17:32:04 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 18:18:44 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ public:
 	Fixed	getY( void ) const;
 
 };
+
+bool	bsp( Point const a, Point const b, Point const c, Point const point );
 
 #endif
