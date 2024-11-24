@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:29:48 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/24 18:18:44 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:37:14 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,20 @@
 
 # include "Fixed.hpp"
 
+/*----------------------*/
+/*  Define Point class  */
+/*----------------------*/
 class	Point {
 
 private:
 
-	Fixed	_x;
-	Fixed	_y;
+	Fixed const	_x;
+	Fixed const	_y;
 
 public:
 
 	Point( void );
-	Point( float x, float y );
+	Point( const float x, const float y );
 	Point( const Point& other );
 	Point& operator=( const Point& other );
 	~Point( void );
@@ -35,6 +38,9 @@ public:
 
 };
 
+/*-------------*/
+/*  Functions  */
+/*-------------*/
 bool	bsp( Point const a, Point const b, Point const c, Point const point );
 
 #endif

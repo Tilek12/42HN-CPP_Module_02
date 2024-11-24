@@ -4,7 +4,7 @@ VIOLET	= \033[0;35m
 RESET	= \033[0m
 
 # Variables
-NAME = fixed
+NAME = bsp
 SRC = main.cpp bsp.cpp Fixed.cpp Point.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
