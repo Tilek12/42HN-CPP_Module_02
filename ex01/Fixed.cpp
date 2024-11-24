@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:20:43 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/23 18:40:06 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 10:14:54 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,17 +75,17 @@ Fixed::~Fixed( void ) {
 
 }
 
-int	Fixed::getRawBits( void ) const {
-
-	std::cout << "getRawBits member function called\n";
-	return _fixedPointValue;
-
-}
-
 void	Fixed::setRawBits( int const raw ) {
 
 	std::cout << "setRawBits member function called\n";
 	_fixedPointValue = raw;
+
+}
+
+int	Fixed::getRawBits( void ) const {
+
+	std::cout << "getRawBits member function called\n";
+	return _fixedPointValue;
 
 }
 

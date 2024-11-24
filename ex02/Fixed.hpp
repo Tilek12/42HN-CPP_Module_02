@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 19:53:14 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/23 20:31:46 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 10:15:12 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ public:
 
 	~Fixed( void );
 
-	int		getRawBits( void ) const;
 	void	setRawBits( int const raw );
+	int		getRawBits( void ) const;
 	float	toFloat( void ) const;
 	int		toInt( void ) const;
 
@@ -50,8 +50,8 @@ public:
 	bool	operator==( const Fixed& other ) const;
 	bool	operator!=( const Fixed& other ) const;
 
-	Fixed	operator+( const Fixed& other ) const;
 	Fixed	operator-( const Fixed& other ) const;
+	Fixed	operator+( const Fixed& other ) const;
 	Fixed	operator*( const Fixed& other ) const;
 	Fixed	operator/( const Fixed& other ) const;
 

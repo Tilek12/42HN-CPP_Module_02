@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:05:53 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/23 18:31:48 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 10:00:59 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ public:
 
 	~Fixed( void );
 
-	int		getRawBits( void ) const;
 	void	setRawBits( int const raw );
+	int		getRawBits( void ) const;
 	float	toFloat( void ) const;
 	int		toInt( void ) const;
 
