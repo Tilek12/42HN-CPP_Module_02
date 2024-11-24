@@ -6,19 +6,25 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:20:43 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/24 10:14:54 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 14:06:29 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
+/*---------------------------------------------*/
+/*  Fixed Class constructor with no parameter  */
+/*---------------------------------------------*/
 Fixed::Fixed( void ) : _fixedPointValue( 0 ) {
 
 	std::cout << "Default constuctor called\n";
 
 }
 
-Fixed::Fixed( int value ) {
+/*----------------------------------------------*/
+/*  Fixed Class constructor with int parameter  */
+/*----------------------------------------------*/
+Fixed::Fixed( const int value ) {
 
 	std::cout << "Int constructor called\n";
 
@@ -33,7 +39,10 @@ Fixed::Fixed( int value ) {
 
 }
 
-Fixed::Fixed( float value ) {
+/*------------------------------------------------*/
+/*  Fixed Class constructor with float parameter  */
+/*------------------------------------------------*/
+Fixed::Fixed( const float value ) {
 
 
 	std::cout << "Float constructor called\n";
@@ -50,6 +59,9 @@ Fixed::Fixed( float value ) {
 
 }
 
+/*--------------------------------*/
+/*  Fixed Class copy constructor  */
+/*--------------------------------*/
 Fixed::Fixed( const Fixed& other ) {
 
 	std::cout << "Copy constructor called\n";
@@ -57,6 +69,9 @@ Fixed::Fixed( const Fixed& other ) {
 
 }
 
+/*----------------------------------------*/
+/*  Fixed Class copy assignment operator  */
+/*----------------------------------------*/
 Fixed& Fixed::operator=( const Fixed& other ) {
 
 	std::cout << "Copy assignment operator called\n";
@@ -69,12 +84,18 @@ Fixed& Fixed::operator=( const Fixed& other ) {
 
 }
 
+/*--------------------------*/
+/*  Fixed Class destructor  */
+/*--------------------------*/
 Fixed::~Fixed( void ) {
 
 	std::cout << "Desctructor called\n";
 
 }
 
+/*------------------------------*/
+/*  Define setRawBits function  */
+/*------------------------------*/
 void	Fixed::setRawBits( int const raw ) {
 
 	std::cout << "setRawBits member function called\n";
@@ -82,6 +103,9 @@ void	Fixed::setRawBits( int const raw ) {
 
 }
 
+/*------------------------------*/
+/*  Define getRawBits function  */
+/*------------------------------*/
 int	Fixed::getRawBits( void ) const {
 
 	std::cout << "getRawBits member function called\n";
@@ -89,18 +113,27 @@ int	Fixed::getRawBits( void ) const {
 
 }
 
+/*---------------------------*/
+/*  Define toFloat function  */
+/*---------------------------*/
 float	Fixed::toFloat( void ) const {
 
 	return static_cast<float>( _fixedPointValue ) / ( 1 << _fractionalBits );
 
 }
 
+/*-------------------------*/
+/*  Define toInt function  */
+/*-------------------------*/
 int	Fixed::toInt( void ) const {
 
 	return _fixedPointValue >> _fractionalBits;
 
 }
 
+/*---------------------------------------*/
+/*  Overload the insertion («) operator  */
+/*---------------------------------------*/
 std::ostream& operator<<( std::ostream& out, const Fixed& fixed ) {
 
 	out << fixed.toFloat();

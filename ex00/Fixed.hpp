@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 11:32:15 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/23 17:59:34 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 13:49:38 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 
+/*----------------------*/
+/*  Define Fixed class  */
+/*----------------------*/
 class Fixed {
 
 private:
@@ -29,8 +32,8 @@ public:
 	Fixed& operator=( const Fixed& other );
 	~Fixed();
 
-	int		getRawBits( void ) const;
 	void	setRawBits( int const raw );
+	int		getRawBits( void ) const;
 
 };
 

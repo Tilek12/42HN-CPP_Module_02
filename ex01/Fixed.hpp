@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:05:53 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/24 10:00:59 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 13:56:22 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 # define intMAX 2147483647
 # define intMIN -2147483648
 
+/*----------------------*/
+/*  Define Fixed class  */
+/*----------------------*/
 class	Fixed {
 
 private:
@@ -29,8 +32,8 @@ private:
 public:
 
 	Fixed( void );
-	Fixed( int value );
-	Fixed( float value );
+	Fixed( const int value );
+	Fixed( const float value );
 
 	Fixed( const Fixed& other );
 
@@ -45,6 +48,9 @@ public:
 
 };
 
+/*-------------*/
+/*  Functions  */
+/*-------------*/
 std::ostream& operator<<( std::ostream& out, const Fixed& fixed );
 
 #endif
