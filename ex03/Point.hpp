@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:29:48 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/24 14:38:18 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 17:32:04 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ class	Point {
 
 private:
 
-	Fixed	x;
-	Fixed	y;
+	Fixed	_x;
+	Fixed	_y;
 
 public:
 

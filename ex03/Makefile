@@ -5,7 +5,7 @@ RESET	= \033[0m
 
 # Variables
 NAME = fixed
-SRC = bsp.cpp Fixed.cpp Point.cpp
+SRC = main.cpp bsp.cpp Fixed.cpp Point.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++17

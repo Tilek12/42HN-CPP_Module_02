@@ -6,15 +6,15 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 19:53:14 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/24 14:15:04 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 14:56:30 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-# include <iostream>
 # include <cmath>
+# include <iostream>
 
 # define intMAX 2147483647
 # define intMIN -2147483648
