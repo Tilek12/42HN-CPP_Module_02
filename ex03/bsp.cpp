@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:39:40 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/24 20:37:16 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:54:15 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,5 @@ bool	bsp( Point const a, Point const b, Point const c, Point const point ) {
 	bool	isInside = ( totalArea == newArea );
 	bool	isOnEdge = ( areaPBC == 0 || areaAPC == 0 || areaABP == 0 );
 
-	return isInside || isOnEdge;
+	return isInside && !isOnEdge;
 }
